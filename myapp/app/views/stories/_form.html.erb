@@ -1,0 +1,16 @@
+<%= form_for @story do |f| %>
+	<% if @story.errors.any? %>
+		<h3>Hold On! You have got Errors</h3>
+		<ul>
+		  <% @story.errors.full_messages.each do |msg| %>
+		    <li><%= msg %></li>
+		  <% end %>
+		</ul>
+	<% end %>
+
+  <label>Name:</label><br/>          <%= f.text_field :name%><br />
+  <label>Description : </label><br/>  <%= f.text_field :description%><br />
+  <label>Link URL : </label><br/>     <%= f.text_field :link %><br /><br/>
+  <label>Status   : </label>     <%= f.check_box :isposted %><br />
+  <%= f.submit %> 
+<% end %>

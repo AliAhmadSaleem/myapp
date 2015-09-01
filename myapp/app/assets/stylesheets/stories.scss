@@ -1,3 +1,21 @@
 // Place all the styles related to the stories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: lavender;
+  margin: 9% 25%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.indexPage {
+  background-color: #fff;
+  border: 10px solid #ccc;
+  padding: 2% 2% 2% 2%;
+  table-layout: fixed;
+
+}
+td.indexPage{
+    overflow: hidden;
+    width: 100px;
+  margin: 1%;
+
+}

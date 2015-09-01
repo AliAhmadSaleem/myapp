@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
-
+<span id="vote_score">
+Score: <%= @story.votes.size %>
+</span>
 <p>
   <strong>Name:</strong>
   <%= @story.name %>
@@ -19,6 +20,11 @@
   <strong>Isposted:</strong>
   <%= @story.isposted %>
 </p>
+<div id="vote_form">
+  <%= form_tag (story_votes_path(@story.id)), :remote => true, method: :post do %>
+      <%= submit_tag 'shove it' %>
+  <% end %>
 
-<%= link_to 'Edit' , edit_story_path%>
-<%= link_to 'Back' , stories_index_path%>
+</div>
+<%= link_to 'Edit', edit_story_path %>
+<%= link_to 'Back', stories_path %>

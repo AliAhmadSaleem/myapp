@@ -2,13 +2,18 @@
 <html>
 <head>
   <title>Myapp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <% javascript_include_tag :defaults%>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <% unless flash[:notice].blank? %>
-<div id="notification"><%= flash[:notice] %></div>
+    <div id="notificationI"><%= flash[:notice] %></div>
+<% end %>
+
+<% unless flash[:error].blank? %>
+    <div id="notificationE"><%= flash[:error] %></div>
 <% end %>
 <%= yield %>
 

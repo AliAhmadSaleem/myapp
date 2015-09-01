@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'stories/index'
 
-  get 'stories/index'
-  resources:stories
+
+  resources :stories, :has_many => :votes do
+    resources :votes
+  end
 
 
 
